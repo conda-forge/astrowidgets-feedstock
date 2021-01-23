@@ -34,7 +34,7 @@ test:
 
 about:
   home: https://astrowidgets.readthedocs.io
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.rst
   summary: Astronomy widgets for the Jupyter notebook and JupyterLab
