@@ -1,18 +1,18 @@
 {% set name = "astrowidgets" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: ddaac075a74a6cf28c4f4c3c0addf09fa5686d5620760bfbbf4f2838cf188c12
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 111b25b44c69b9a758377b94db886ddc1651a0b4dfdb487f46b1e25a9cd4b564
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -33,16 +33,16 @@ test:
     - astrowidgets
 
 about:
-  home: "https://astrowidgets.readthedocs.io"
-  license: "BSD 3-Clause"
-  license_family: "BSD"
-  license_file: "LICENSE.rst"
-  summary: "Astronomy widgets for the Jupyter notebook and JupyterLab"
+  home: https://astrowidgets.readthedocs.io
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.rst
+  summary: Astronomy widgets for the Jupyter notebook and JupyterLab
   description: |
     astrowidgets provides an image viewer Jupyter widget for the Jupyter
     notebook and JupyterLab.
-  doc_url: "https://astrowidgets.readthedocs.io"
-  dev_url: "https://github.com/astropy/astrowidgets"
+  doc_url: https://astrowidgets.readthedocs.io
+  dev_url: https://github.com/astropy/astrowidgets
 
 extra:
   recipe-maintainers:
