@@ -1,11 +1,11 @@
-About astrowidgets
-==================
+About astrowidgets-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/astrowidgets-feedstock/blob/main/LICENSE.txt)
 
 Home: https://astrowidgets.readthedocs.io
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/astrowidgets-feedstock/blob/main/LICENSE.txt)
 
 Summary: Astronomy widgets for the Jupyter notebook and JupyterLab
 
