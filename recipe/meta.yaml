@@ -17,12 +17,12 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - astropy
     - ginga
     - ipywidgets >=7.5
-    - python
+    - python >=3.6
     - {{ pin_compatible('numpy') }}
 
 test:
