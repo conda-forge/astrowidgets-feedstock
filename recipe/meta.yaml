@@ -17,16 +17,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python
   run:
-    - aggdraw
     - astropy
     - ginga
-    - ipyevents >=0.6.3
     - ipywidgets >=7.5
-    - jupyterlab >=1
-    - pillow
-    - python >=3.6
+    - python
+    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
