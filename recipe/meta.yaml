@@ -6,27 +6,29 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: f913ec7f682e5e6b61ccacde9a46a40cf6012ccd4a76d4a216b79ad33eda473d
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - astropy
     - ginga
     - ipywidgets >=7.5
     - ipyevents >=0.6.3
-    - python >=3.6
+    - python >={{ python_min }}
     - {{ pin_compatible('numpy') }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - astrowidgets
 
