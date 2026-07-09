@@ -1,5 +1,5 @@
 {% set name = "astrowidgets" %}
-{% set version = "0.3.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f913ec7f682e5e6b61ccacde9a46a40cf6012ccd4a76d4a216b79ad33eda473d
+  sha256: cfb646f453db281aa3d4fa7c21605347cb8ca0ca36d81566369a959f31b881bf
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
