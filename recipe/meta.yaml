@@ -14,15 +14,18 @@ build:
   number: 2
   # setuptools_scm cannot determine the version when building from the sdist
   # without git metadata, so the installed dist-info ends up as 0.0.0
-  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv
+  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
+    - setuptools_scm
+    - wheel
   run:
     - aggdraw
-    - astropy
+    - astropy-base
     - ginga >=3.4
     - ipyevents >=0.6.3
     - ipywidgets >=7.5
