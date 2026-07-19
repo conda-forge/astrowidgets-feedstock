@@ -11,26 +11,34 @@ source:
 
 build:
   noarch: python
-  number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 2
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
+    - setuptools_scm
+    - wheel
   run:
-    - astropy
-    - ginga
-    - ipywidgets >=7.5
+    - aggdraw
+    - astropy-base
+    - ginga >=3.4
     - ipyevents >=0.6.3
+    - ipywidgets >=7.5
+    - jupyterlab >=3
+    - pillow
     - python >={{ python_min }}
-    - {{ pin_compatible('numpy') }}
 
 test:
   requires:
     - python {{ python_min }}
+    - pip
   imports:
     - astrowidgets
+  commands:
+    - pip check
 
 about:
   home: https://astrowidgets.readthedocs.io
